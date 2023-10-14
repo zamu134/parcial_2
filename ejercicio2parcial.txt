@@ -1,0 +1,23 @@
+using System;
+
+class Ejercicio_2
+{
+    static void Main()
+    {
+        
+        Console.Write("Ingresar el radio de la esfera: ");
+        double R = double.Parse(Console.ReadLine());
+   
+        double PI = Math.Round(Math.PI, 5); 
+        double areaSuperficial = 4 * PI * Math.Pow(R, 2);
+        double V = (4.0 / 3.0) * PI * Math.Pow(R, 3);
+
+        double areaSuperficialRedondeadaArriba = Math.Ceiling(areaSuperficial);
+        double areaSuperficialRedondeadaAbajo = Math.Floor(areaSuperficial);
+        double volumenRedondeadoArriba = Math.Ceiling(V);
+        double volumenRedondeadoAbajo = Math.Floor(V);
+
+        Console.WriteLine($"El Área Superficial es de: {areaSuperficial} (Redondeado hacia arriba: {areaSuperficialRedondeadaArriba}, Redondeado hacia abajo: {areaSuperficialRedondeadaAbajo})");
+        Console.WriteLine($"El Volumen es de: {V} (Redondeado hacia arriba: {volumenRedondeadoArriba}, Redondeado hacia abajo: {volumenRedondeadoAbajo})");
+    }
+}

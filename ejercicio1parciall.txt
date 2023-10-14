@@ -1,0 +1,28 @@
+using System;
+
+class Ejercicio_2
+{
+    static void Main()
+    {
+        Console.WriteLine("Bienvenidos a la configuracion el router");
+        Console.WriteLine("*********************************\n");
+        string claveDefault = "AdministradoR";
+
+        Console.Write("Ingresar la clave: ");
+
+        string claveIngresada = Console.ReadLine().Trim().ToLower();
+
+        if (claveIngresada == claveDefault.ToLower())
+        {
+            Console.WriteLine("\n************************************************************************************************");
+            Console.WriteLine("La clave ingresada es correcta, Puede realizar la configuracion del respaldo.");
+            Console.WriteLine("************************************************************************************************");
+        }
+        else
+        {
+            Console.WriteLine("\n************************************************************************************************");
+            Console.WriteLine("La clave ingresada es incorrecta, No puede acceder para realizar la configuracion del respaldo.");
+            Console.WriteLine("************************************************************************************************");
+        }
+    }
+}
